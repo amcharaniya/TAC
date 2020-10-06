@@ -1,3 +1,6 @@
+# Large data files
+Stata/data_input/Link.dta
+
 # History files
 .Rhistory
 .Rapp.history
