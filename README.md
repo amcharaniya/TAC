@@ -12,7 +12,7 @@ The simplest way to use TAC is to download a ready-to-use data set in the format
 
 - Terrrism count data by group-year
   + CSV format
-  + STATA format
+  + [STATA format](Stata/TAC.dta)
   + R format
 - Standard TAC count data by dyad-year
   + CSV format
@@ -23,7 +23,7 @@ The simplest way to use TAC is to download a ready-to-use data set in the format
 
 This repository also includes the source data and code to generate the Terrorism in Armed Conflict data set.
 
-The code is implemented in both Stata and R (see the [`Stata`](Stata/) and `R` folders, respectively).
+The code is implemented in both Stata and R (see the [`Stata`](Stata/) and [`R`](R/) folders, respectively).
 
 ## Interactive Apps
 
