@@ -6,8 +6,39 @@ TAC brings together information from the most commonly used data set in the stud
 
 Currently, TAC provides annual counts of the use of terrorism by 409 armed opposition groups in 166 intrastate conflicts in 96 countries from 1970-2013.
 
-# Code Repository
+## Data Downloads
 
-This repository includes the source data and code to generate the Terrorism in Armed Conflict data set.
+The simplest way to use TAC is to download a ready-to-use data set in the format of your choice. These data files use the standard set of count variables and implement a definition of terrorism as "deliberately indiscriminate" violence (see the TAC Codebook for more details).
+
+- Terrrism count data by group-year
+  + CSV format
+  + STATA format
+  + R format
+- Standard TAC count data by dyad-year
+  + CSV format
+  + STATA format
+  + R format
+
+## Source Code
+
+This repository also includes the source data and code to generate the Terrorism in Armed Conflict data set.
 
 The code is implemented in both Stata and R (see the `Stata` and `R` folders, respectively).
+
+## Interactive Apps
+
+You can also interact with TAC data through our apps.
+
+### Custom Data Interface
+
+This app allows researchers to generate terrorism count data using custom criteria (e.g., attack or target type). You can access the app in your browser at <https://nicklotito.shinyapps.io/tacdata/>.
+
+Alternatively, you can run the app on your own computer using R. To access:
+
+1. Install R (free and open-source software) for [Windows](https://cran.r-project.org/bin/windows/base/) or [Mac OSX](https://cran.r-project.org/bin/macosx/)
+2. Run RGui and install the required R packages by typing `install.packages(c("shiny","shinyjs","dplyr"))` at the R command line
+3. Launch the TAC app by typing `shiny::runGitHub('TACdata', 'TACDataProject')`
+
+### Explore by Group
+
+This app allows users to visualize the trend in terrorism incidents by rebel group. Access the app at: <https://app.nicklotito.com/shiny/TACgroup/>.
