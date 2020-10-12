@@ -8,7 +8,7 @@ Currently, TAC provides annual counts of the use of terrorism by 409 armed oppos
 
 ## Data Downloads
 
-The simplest way to use TAC is to download a ready-to-use data set in the format of your choice. These data files use the standard set of count variables and implement a definition of terrorism as "deliberately indiscriminate" violence (see the codebook for more details).
+The simplest way to use TAC is to download a ready-to-use data set in the format of your choice. These data files use the standard set of count variables and implement a definition of terrorism as "deliberately indiscriminate" violence (see the [TAC Codebook](Download/TAC_Codebook_202010.pdf) for more details).
 
 - Terrrism count data by group-year
   + [Plain-text format](Download/TAC_group_202010.csv)
@@ -18,7 +18,6 @@ The simplest way to use TAC is to download a ready-to-use data set in the format
   + [Plain-text format](Download/TAC_dyad_202010.csv)
   + [Stata format](Download/TAC_dyad_202010.dta)
   + [R format](Download/TAC_dyad_202010.rds)
-- [TAC Codebook](Download/TAC_Codebook_202010.pdf)
 
 ## Source Code
 
