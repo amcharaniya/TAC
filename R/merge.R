@@ -8,7 +8,7 @@ library(dplyr)
 library(tidyr)
 # library(rlang)
 
-setwd("~/../GitHub/TAC")
+setwd("~/../GitHub/TACDataProject/TAC/R")
 
 rm(list=ls())
 load("source.Rdata")
@@ -116,20 +116,13 @@ tac.generate <- function(unit = "group"){
 # Group-year data
 df.out.group<- tac.generate("group")
 
+saveRDS(df.out.group, "../Data/TAC_group_202010.rds")
+haven::write_dta(df.out.group, "../Data/TAC_group_202010.dta")
+write.csv(df.out.group, "../Data/TAC_group_202010.csv")
+
 # Dyad-year data
 df.out.dyad <- tac.generate("dyad")
 
-
-# ######################################################
-# # Generate data for Asal et al 2019 replication
-# #   (using their terrorism definition)
-# ######################################################
-# 
-# # Less restrictive (t_a, t_b, ..., m_a, etc.)
-# attack.list <- c(1:9)
-# target.list <- c(1:2, 5:22)
-# df.asal <- tac.generate("group") %>% 
-#     select(sidebid, year, a_a = t_a, a_b = t_b, a_c = t_c,
-#            a_d = t_d, a_e = t_e, a_f = t_f) %>% 
-#     mutate_all(as.integer)
-# all_equal(tac.asal, df.asal)
+saveRDS(df.out.dyad, "../Data/TAC_dyad_202010.rds")
+haven::write_dta(df.out.dyad, "../Data/TAC_dyad_202010.dta")
+write.csv(df.out.dyad, "../Data/TAC_dyad_202010.csv")
