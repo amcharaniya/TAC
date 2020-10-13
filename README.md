@@ -31,7 +31,7 @@ You can also interact with TAC data through our apps.
 
 ### Custom Data Interface
 
-This app allows researchers to generate terrorism count data using custom criteria (e.g., attack or target type). You can access the app in your browser at <https://nicklotito.shinyapps.io/tacdata/>.
+This app allows researchers to generate terrorism count data using custom criteria (e.g., attack or target type). You can access the app in your browser at <https://app.nicklotito.com/shiny/TACgroup/>.
 
 Alternatively, you can run the app on your own computer using R. To access:
 
