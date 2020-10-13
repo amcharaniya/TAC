@@ -39,7 +39,7 @@ Alternatively, you can run the app on your own computer using R. To access:
 2. Run RGui and install the required R packages by typing `install.packages(c("shiny","shinyjs","dplyr"))` at the R command line
 3. Launch the TAC app by typing `shiny::runGitHub('DataApp', 'TACDataProject')`
 
-You can also access the [source code for this app on GitHub](https://github.com/TACDataProject/TACDataApp).
+You can also access the [source code for this app on GitHub](https://github.com/TACDataProject/DataApp).
 
 ### Explore by Group
 
