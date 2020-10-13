@@ -43,4 +43,8 @@ You can also access the [source code for this app on GitHub](https://github.com/
 
 ### Explore by Group
 
-This app allows users to visualize the trend in terrorism incidents by rebel group. Access the app at: <https://app.nicklotito.com/shiny/TACgroup/>.
+This app allows users to visualize the trend in terrorism incidents by rebel group. Access the app online at: <https://app.nicklotito.com/shiny/TACgroup/>
+
+Or run the app from R (follow steps 1 and 2 above) with the command `shiny::runGitHub('GroupApp', 'TACDataProject')`.
+
+You can also access the [source code for this app on GitHub](https://github.com/TACDataProject/GroupApp).
