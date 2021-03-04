@@ -13,6 +13,7 @@ rm(list=ls())
 
 # Load data created with Stata
 
+dyads.dta <- read_dta("Stata/data_input/Dyads.dta")
 link.dta <- read_dta("Stata/data_input/Link.dta")
 gtd.dta <- read_dta("Stata/data_input/GTD0814.dta")
 ucdp.dta <- read_dta("Stata/data_input/UCDP2014.dta")
@@ -20,6 +21,7 @@ date.range.dta <- read_dta("Stata/data_input/DateRange.dta")
 
 # Write to compressed RDS format
 
+write_rds(dyads.dta, "R/data/Dyads.rds", "xz", compression = 7L)
 write_rds(link.dta, "R/data/Link.rds", "xz", compression = 7L)
 write_rds(gtd.dta, "R/data/GTD0814.rds", "xz", compression = 7L)
 write_rds(ucdp.dta, "R/data/UCDP2014.rds")
@@ -27,6 +29,8 @@ write_rds(date.range.dta, "R/data/DateRange.rds")
 
 # Confirm files are identical
 
+dyads <- readRDS("R/data/Dyads.rds")
+identical(dyads.dta, dyads)
 link <- readRDS("R/data/Link.rds")
 identical(link.dta, link)
 gtd <- readRDS("R/data/GTD0814.rds")
