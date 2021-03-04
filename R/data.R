@@ -1,19 +1,19 @@
 # TAC Data Setup
-# Nick Lotito, v.2020-09
+# Nick Lotito, v.2021-03
 library(dplyr)
 library(tidyr)
-library(haven)
+library(readr)
 
-setwd("~/../GitHub/TAC")
+setwd("~/../GitHub/TAC/R")
 
 rm(list=ls())
 
 # SET UP SOURCE DATA
 
-link.raw <- read_dta("Stata/data_input/Link.dta")
-gtd.raw <- read_dta("Stata/data_input/GTD0814.dta")
-ucdp.raw <- read_dta("Stata/data_input/UCDP2014.dta")
-date.range.raw <- read_dta("Stata/data_input/DateRange.dta")
+link.raw <- read_rds("data/Link.rds")
+gtd.raw <- read_rds("data/GTD0814.rds")
+ucdp.raw <- read_rds("data/UCDP2014.rds")
+date.range.raw <- read_rds("data/DateRange.rds")
 
 link <- link.raw %>%
   as_tibble() %>%
@@ -63,4 +63,3 @@ df.source <- left_join(link, distinct(select(ucdp, dyadid, sidebid))) %>%
 df <- left_join(df.source, gtd)
 
 save(df.source, gtd, date.range.dyad, date.range.group, file = "source.Rdata")
-

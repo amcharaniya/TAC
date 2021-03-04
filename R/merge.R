@@ -1,14 +1,13 @@
 ######################################################
 # Terrorism in Armed Conflict (TAC)
 # Code to Generate Count Data
-# Nick Lotito, v.2020-09
+# Nick Lotito, v.2021-03
 ######################################################
 
 library(dplyr)
 library(tidyr)
-# library(rlang)
 
-setwd("~/../GitHub/TACDataProject/TAC/R")
+setwd("~/../GitHub/TAC/R")
 
 rm(list=ls())
 load("source.Rdata")
@@ -116,13 +115,13 @@ tac.generate <- function(unit = "group"){
 # Group-year data
 df.out.group<- tac.generate("group")
 
-saveRDS(df.out.group, "../Data/TAC_group_202010.rds")
-haven::write_dta(df.out.group, "../Data/TAC_group_202010.dta")
-write.csv(df.out.group, "../Data/TAC_group_202010.csv")
+saveRDS(df.out.group, "TAC_group_202010.rds")
+haven::write_dta(df.out.group, "TAC_group_202010.dta")
+write.csv(df.out.group, "TAC_group_202010.csv")
 
 # Dyad-year data
 df.out.dyad <- tac.generate("dyad")
 
-saveRDS(df.out.dyad, "../Data/TAC_dyad_202010.rds")
-haven::write_dta(df.out.dyad, "../Data/TAC_dyad_202010.dta")
-write.csv(df.out.dyad, "../Data/TAC_dyad_202010.csv")
+saveRDS(df.out.dyad, "TAC_dyad_202010.rds")
+haven::write_dta(df.out.dyad, "TAC_dyad_202010.dta")
+write.csv(df.out.dyad, "TAC_dyad_202010.csv")
