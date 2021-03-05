@@ -19,6 +19,8 @@ The simplest way to use TAC is to download a ready-to-use data set in the format
   + [Stata format (DTA)](Download/TAC_dyad_202010.dta)
   + [R format (RDS)](Download/TAC_dyad_202010.rds)
 
+To create your own count data using TAC, see the source code or interactive apps linked below. You can also access the list of TAC coding decisions in [R format](Download/Dyads.rds) or [plain-text](Download/Dyads.csv) or the full list of GTD incidents linked to UCDP groups in [R format](Download/Link.rds) or [plain-text](Download/Link.csv).
+
 ## Source Code
 
 This repository also includes the source data and code to generate the Terrorism in Armed Conflict data set.

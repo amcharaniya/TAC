@@ -7,7 +7,7 @@ library(tidyr)
 library(haven)
 library(readr)
 
-setwd("~/../GitHub/TAC")
+setwd("~/GitHub/TACDataProject/TAC")
 
 rm(list=ls())
 
@@ -39,3 +39,10 @@ ucdp <- readRDS("R/data/UCDP2014.rds")
 identical(ucdp.dta, ucdp)
 date.range <- readRDS("R/data/DateRange.rds")
 identical(date.range.dta, date.range)
+
+# Write files to Download folder
+
+write_csv(dyads.dta, file = "Download/Dyads.csv")
+write_csv(link.dta, file = "Download/Link.csv")
+write_rds(dyads.dta, "Download/Dyads.rds", "xz", compression = 7L)
+write_rds(link.dta, "Download/Link.rds", "xz", compression = 7L)
